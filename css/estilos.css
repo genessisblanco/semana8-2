@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p {
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+.div_transiciones,
+.div_Animaciones,
+.div_Transformacion {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    transition: width 10s;
+}
+
+.div_transiciones:hover {
+    width: 300px;
+}
+
+/* .div_Animaciones:hover {
+    animation: example 5s ease;
+    duration timing-function delay iteration-count direction fill-mode;
+} */
+
+.div_Animaciones {
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+.div_Transformacion {
+    animation-name: rotar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
